@@ -1,18 +1,10 @@
-data "aws_caller_identity" "current" {}
+module "mc_aws_transit" {
+  source = "git::https://github.com/terraform-aviatrix-modules/terraform-aviatrix-mc-transit"
 
-data "aws_region" "current" {}
-
-data "aws_availability_zones" "available" {}
-
-#module.aviatrix-controller-build.public_ip
-
-data "terraform_remote_state" "remote" {
-  backend = "remote"
-
-  config = {
-    organization = "cloudsilverlining"
-    workspaces = {
-      name = "avx-mgmt"
-    }
-  }
+  cloud                  = "AWS"
+  cidr                   = var.aws_transit_cidr
+  region                 = var.aws_region
+  account                = "aws-account"
+  enable_transit_firenet = true
+  enable_segmentation    = true
 }

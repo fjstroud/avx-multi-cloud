@@ -38,14 +38,6 @@ variable "controller_subnet_cidr" {
 }
 
 
-variable "customer_license_id" {
-
-  default     = ""
-  description = "controller license"
-}
-
-variable "type" {
-  default     = "BYOL"
-  description = "Type of controller license.  Valid values are MeteredPlatinumCopilot, BYOL and Custom"
-
+variable aws_transit_cidr {
+  default = "10.1.0.0/16"
 }
