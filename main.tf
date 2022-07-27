@@ -4,6 +4,8 @@ data "aws_region" "current" {}
  
  module "mc_aws_transit" {
   #source = "git::https://github.com/terraform-aviatrix-modules/terraform-aviatrix-mc-transit"
+  
+  
   source  = "terraform-aviatrix-modules/mc-transit/aviatrix/"
   version = "2.1.6"
   cloud                  = "AWS"
