@@ -4,10 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "4.22.0"
     }
-    aviatrix = {
+    /*aviatrix = {
       source  = "AviatrixSystems/aviatrix"
       version = "2.22.2"
     }
+    */
   }
 }
 terraform {

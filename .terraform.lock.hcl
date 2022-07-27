@@ -3,7 +3,7 @@
 
 provider "registry.terraform.io/aviatrixsystems/aviatrix" {
   version     = "2.22.2"
-  constraints = "2.22.2"
+  constraints = "~> 2.22.0"
   hashes = [
     "h1:Y7aUbTEhkQC2vE9gbwhR9a0Jj02tVYIMCYYvMr4/6oA=",
     "zh:03af10d16d9329231bac39caa3c97ed78a0a0dc2e3f3120e884ee422aac486d5",
