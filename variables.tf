@@ -16,7 +16,6 @@ variable "aws_account_name" {
 
 
 
-}
 
 
 variable aws_transit_cidr {
