@@ -16,10 +16,3 @@ data "terraform_remote_state" "remote" {
     }
   }
 }
-
-resource "aws_instance" "foo" {
-  ami           = "ami-04dd0e149d2907d65"
-  instance_type = "t3.large"
-  public_ip     = data.terraform_remote_state.remote.outputs.public_ip
-}
-
